@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+
+    <style>
+        /*
+        SELETORES: definem em quais elementos nós vamos aplicar o CSS
+        1. Seletor de Tag/Tipo
+        2. Seletor por ID
+        3. Seletor por classe
+        4. Seletor Universal
+        5. Seletor de atributo
+        */
+
+        /* 1 */
+        h1 {
+            background: darkblue;
+            color: lightgreen;
+        }
+        
+        div {
+            background: lightblue;
+            color: darkblue;
+        }
+        
+        li {
+            background: lightgray;
+        }
+        /* 2 */
+        #texto-boas-vindas {
+            background: red;
+            color: white;
+        }
+        /* 3 */
+        .seletores-mais-comuns {
+            color: green;
+        }
+        
+        .texto-maiusculo {
+            text-transform: uppercase;
+        }
+        /* 4 */
+        * {
+            font-weight: bold;
+        }
+
+        /* 5 */
+        .texto, h1 {
+            color: gray;
+        }
+
+        h1, [id^="botao"] {
+            background: lightcoral;
+        }
+
+        [title="Netflix"] {
+            color: lightyellow;
+        }
+        [title="Prime Video"] {
+            color: lightslategray;
+        }
+        [title="spotify"] {
+            color: lightcyan;
+        }
+        </style>
+</head>
+<body>
+    <h1>Seletores CSS</h1>
+    <p id="texto-boas-vindas">Bem-vindo!</p>
+    <p id="explicacao-seletores">No css nós possuimos os seletores por ID</p>
+    <p class="texto">Podemos aplicar as mesma regras CSS para vários seletores diferetes. Para isso, podemos separar os seletores utilizando uma virgula(,)</p>
+    <div class="texto">Assim, não precisamos ficar copiando e colando os mesmo códigos para todos, nós podemos fazer um só bloco de CSS e reutilizando as mesma regras!</div>
+    <div>
+        <ul>
+            <li class="seletores-mais-comuns"><b>Seletor por Tipo:</b>Busca elementos por uma tag HTML especifica</li>
+            <li class="seletores-mais-comuns"><b>Seletor por ID (#):</b>Busca elementos através do atributo 'ID'</li>
+            <li class="seletores-mais-comuns"><b>Seletor por Classe (.):</b>Busca elementos através do atributo 'class'</li>
+            <li><b>Seletor por Universal (*):</b>Seleciona todos os elementos HTML</li>
+            <li class="texto-maiusculo"><b>Seletor por Atributo ([atrib]):</b>Seleciona elementos que possuem um atributo especifico em nosso documento
+                HTML e conseguimos também buscar atributos com um valor especifico</li>
+        </ul>
+        <a id="botao-voltar" href="#">Voltar</a>
+        <ul>
+            <li title="Netflix">NetFlix</li>
+            <li title="Prime Video">Prime Video</li>
+            <li title="Spotify">Spotify</li>
+            <li title="Disney">Disney Plus</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
